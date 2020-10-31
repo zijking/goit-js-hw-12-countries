@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./js/render.js","webpack:///./index.js"],"names":["console","log"],"mappings":"qGAAAA,QAAQC,IAAI,qB,kCCAZ,6B","file":"main.ddddd6bf2540d7ee399d.js","sourcesContent":["console.log('Render script 2!');\r\n","// import './styles.css';\nimport './sass/main.scss';\nimport './js/render';\n"],"sourceRoot":""}
