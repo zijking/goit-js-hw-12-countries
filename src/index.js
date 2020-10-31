@@ -1,1 +1,3 @@
-import './styles.css';
+// import './styles.css';
+import './sass/main.scss';
+import './js/render';
