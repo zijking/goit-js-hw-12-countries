@@ -1,6 +1,6 @@
 // import './styles.css';
 import './sass/main.scss';
-import './js/render';
+
 import listResultTmp from './templates/list-countries.hbs';
 import searchCountryes from './js/fetchCountries';
 const debounceFn = require('lodash.debounce');
@@ -16,13 +16,21 @@ function renderResoult(event) {
     return;
   }
   console.log(q);
-  searchCountryes(q).then(r => {
-    searchResult(r);
+  searchCountryes(q).then(response => {
+    if (response.status === 404) {
+      clearList();
+      return;
+    }
+    searchResult(response);
   });
 }
 
 function searchResult(res) {
-  //   console.dir(listResultEl);
+  clearList();
+
+  listResultEl.insertAdjacentHTML('afterbegin', listResultTmp(res));
+}
+
+function clearList() {
   listResultEl.innerHTML = '';
-  listResultEl.insertAdjacentHTML('beforebegin', listResultTmp(res));
 }
