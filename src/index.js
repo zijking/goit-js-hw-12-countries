@@ -1,10 +1,12 @@
 // import './styles.css';
 import './sass/main.scss';
 import './js/render';
+import listResultTmp from './templates/list-countries.hbs';
 import searchCountryes from './js/fetchCountries';
 const debounceFn = require('lodash.debounce');
 
 const inputEl = document.querySelector('#search-js');
+const listResultEl = document.querySelector('.js-list-countires');
 
 inputEl.addEventListener('input', debounceFn(renderResoult, 500));
 
@@ -20,5 +22,7 @@ function renderResoult(event) {
 }
 
 function searchResult(res) {
-  res.map(r => console.log(r));
+  //   console.dir(listResultEl);
+  listResultEl.innerHTML = '';
+  listResultEl.insertAdjacentHTML('beforebegin', listResultTmp(res));
 }
