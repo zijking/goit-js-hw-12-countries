@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{"0HMw":function(n,o,i){},N3nF:function(n,o){console.log("Render script 2!")},QfWi:function(n,o,i){"use strict";i.r(o);i("0HMw"),i("N3nF")}},[["QfWi",1]]]);
-//# sourceMappingURL=main.ddddd6bf2540d7ee399d.js.map
