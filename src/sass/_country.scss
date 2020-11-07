@@ -1,0 +1,25 @@
+.container-country {
+  display: inline-flex;
+  background-color: rgb(211, 211, 211);
+  flex-direction: column;
+  padding: 10px;
+}
+.counry-name {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+}
+
+.country-description {
+  display: inline-flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.country-description .item {
+  margin: 5px;
+}
+
+.country-flag {
+  max-width: 300px;
+}
